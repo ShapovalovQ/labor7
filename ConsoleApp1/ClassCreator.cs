@@ -22,7 +22,7 @@ namespace ConsoleApp1
 
         public static Class3 Class3()
         {
-            return new Class3();
+            return new Class3(Class1(), Class2());
         }
     }
 }
