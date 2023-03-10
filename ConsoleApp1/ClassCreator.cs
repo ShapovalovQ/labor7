@@ -16,7 +16,6 @@ namespace ConsoleApp1
 
         public static Class2 Class2()
         {
-
             return new Class2(Class1(), Class3());
         }
 
