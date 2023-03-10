@@ -13,6 +13,7 @@ namespace ConsoleApp1
                 {
                     case "Class1": UI.Print(ClassCreator.Class1()); break;
                     case "Class2": UI.Print(ClassCreator.Class2()); break;
+                    case "Class3": UI.Print(ClassCreator.Class3()); break;
                     default: Console.WriteLine("Класс не реализован"); break;
                 }
             }
