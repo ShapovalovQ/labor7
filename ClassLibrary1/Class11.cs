@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class Class4
+    public class Class11
     {
-        public Class4()
+        public Class11()
         {
 
         }
