@@ -13,7 +13,7 @@ namespace ConsoleApp1
                 {
                     case "Class1": UI.Print(ClassCreator.Class1()); break;
                     case "Class2": UI.Print(ClassCreator.Class2()); break;
-                    case "Class3": UI.Print(ClassCreator.Class3()); break;
+                    case "Discipline": UI.Print(ClassCreator.Discipline()); break;
                     case "Class4": UI.Print(ClassCreator.Class4()); break;
                     case "Class5": UI.Print(ClassCreator.Class5()); break;
                     case "Class6": UI.Print(ClassCreator.Class6()); break;

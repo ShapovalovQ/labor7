@@ -8,7 +8,7 @@ namespace ConsoleApp1
         public static void Print(Class1 class1)
         {
             Console.WriteLine($"Class1.Date = {class1.Date}");
-            Print(class1.Class3);
+            Print(class1.Discipline);
             Print(class1.Class9);
             Print(class1.Class2);
             Print(class1.Class4);
@@ -19,12 +19,13 @@ namespace ConsoleApp1
         public static void Print(Class2 class2)
         {
             //Print(class2.Class1);
-            //Print(class2.Class3);
+            //Print(class2.Discipline);
         }
 
-        public static void Print(Class3 class3)
+        public static void Print(Discipline discipline)
         {
-
+            Console.WriteLine($"Discipline.Название = {discipline.Name}");
+            Console.WriteLine($"Discipline.Сокращение = {discipline.Abbreviation}");
         }
 
         public static void Print(Class4 class4)
