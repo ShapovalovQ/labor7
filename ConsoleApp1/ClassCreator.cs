@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Text.RegularExpressions;
 using ClassLibrary1;
 
 namespace ConsoleApp1
@@ -33,7 +34,7 @@ namespace ConsoleApp1
             {
                 date = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
             }
-            return new Class1(date, Class3(), Class9(), Class2(), Class4(), Class7(), Class14());
+            return new Class1(date, Discipline(), Class9(), Class2(), Class4(), Class7(), Class14());
         }
 
         public static Class2 Class2()
@@ -41,9 +42,13 @@ namespace ConsoleApp1
             return new Class2();
         }
 
-        public static Class3 Class3()
+        public static Discipline Discipline()
         {
-            return new Class3();
+            Console.Write("Введите имя: ");
+            string name = Console.ReadLine();
+            Console.Write("Введите сокращение: ");
+            string abbreviation = Console.ReadLine();
+            return new Discipline(name, abbreviation);
         }
 
         public static Class4 Class4()

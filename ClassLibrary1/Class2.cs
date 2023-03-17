@@ -5,12 +5,12 @@ namespace ClassLibrary1
     public class Class2
     {
         //public Class1 Class1 { get; }
-        //public Class3 Class3 { get; }
+        //public Discipline Discipline { get; }
 
-        public Class2()//Class1 class1, Class3 class3)
+        public Class2()//Class1 class1, Discipline discipline)
         {
             //Class1 = class1;
-            //Class3 = class3;
+            //Discipline = discipline;
         }
     }
 }
