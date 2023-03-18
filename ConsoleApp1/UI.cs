@@ -5,21 +5,20 @@ namespace ConsoleApp1
 {
     static class UI
     {
-        public static void Print(Class1 class1)
+        public static void Print(Lesson lesson)
         {
-            Console.WriteLine($"Class1.Date = {class1.Date}");
-            Print(class1.Discipline);
-            Print(class1.Class9);
-            Print(class1.Class2);
-            Print(class1.Class4);
-            Print(class1.Class7);
-            Print(class1.Class14);
+            Console.WriteLine($"Class1.Дата проведения = {lesson.Date}");
+            Print(lesson.Discipline);
+            Print(lesson.Worker);
+            Print(lesson.Auditorium);
+            Print(lesson.Group);
+            Print(lesson.Pair);
+            Print(lesson.TypeOfLesson);
         }
 
-        public static void Print(Class2 class2)
+        public static void Print(Auditorium class2)
         {
-            //Print(class2.Class1);
-            //Print(class2.Discipline);
+            
         }
 
         public static void Print(Discipline discipline)
@@ -28,55 +27,55 @@ namespace ConsoleApp1
             Console.WriteLine($"Discipline.Сокращение = {discipline.Abbreviation}");
         }
 
-        public static void Print(Class4 class4)
+        public static void Print(Group class4)
         {
         }
 
-        public static void Print(Class5 class5)
-        {
-
-        }
-
-        public static void Print(Class6 class6)
+        public static void Print(Student class5)
         {
 
         }
 
-        public static void Print(Class7 class7)
+        public static void Print(Specialty class6)
         {
 
         }
 
-        public static void Print(Class8 class8)
+        public static void Print(Pair class7)
         {
 
         }
 
-        public static void Print(Class9 class9)
+        public static void Print(Shift class8)
         {
 
         }
 
-        public static void Print(Class10 class10)
+        public static void Print(Worker class9)
         {
 
         }
 
-        public static void Print(Class11 class11)
+        public static void Print(Post class10)
         {
 
         }
 
-        public static void Print(Class12 class12)
-        {
-
-        }
-        public static void Print(Class13 class13)
+        public static void Print(Subdivision class11)
         {
 
         }
 
-        public static void Print(Class14 class14)
+        public static void Print(Organization class12)
+        {
+
+        }
+        public static void Print(Corps class13)
+        {
+
+        }
+
+        public static void Print(TypeOfLesson class14)
         {
 
         }

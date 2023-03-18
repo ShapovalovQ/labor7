@@ -1,107 +1,93 @@
 ﻿using System;
 using System.Globalization;
-using System.Text.RegularExpressions;
 using ClassLibrary1;
 
 namespace ConsoleApp1
 {
     static class ClassCreator
     {
-        public static string DateThe()//Дата проведения
+        public static Lesson Lesson()
         {
-            DateTime date; string input,d = "dd.MM.yyyy HH:mm:ss"; bool f = true;
-            while(f)
+            DateTime date = DateTime.Now; string input, d = "dd.MM.yyyy HH:mm:ss"; var ci = CultureInfo.InvariantCulture;
+            while (true)
             {
-                Console.Write("Введите дату в формате \"число.месяц.год часы:минуты:секунды\": ");
+                Console.Write("Введите дату проведения в формате \"число.месяц.год часы:минуты:секунды\": ");
                 input = Console.ReadLine();
-                if (DateTime.TryParseExact(input, d, CultureInfo.InvariantCulture, DateTimeStyles.None, out date))
-                {
-                    return date.ToString(d);
-                }
-                else
+                if (!DateTime.TryParseExact(input, d, ci, DateTimeStyles.None, out _))
                 {
                     if (input == "") break;
                     Console.WriteLine("Неверный формат");
                 }
+                else date = DateTime.ParseExact(input, d, ci); break;
             }
-            return DateTime.Now.ToString(d);
-        }
-        public static Class1 Class1()
-        {
-            var date = DateThe();
-
-            if(date == null)
-            {
-                date = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
-            }
-            return new Class1(date, Discipline(), Class9(), Class2(), Class4(), Class7(), Class14());
+            return new Lesson(date, Discipline(), Worker(), Auditorium(), Group(), Pair(), TypeOfLesson());
         }
 
-        public static Class2 Class2()
+        public static Auditorium Auditorium()
         {
-            return new Class2();
+            return new Auditorium();
         }
 
         public static Discipline Discipline()
         {
-            Console.Write("Введите имя: ");
+            Console.Write("Введите название дисциплины: ");
             string name = Console.ReadLine();
             Console.Write("Введите сокращение: ");
             string abbreviation = Console.ReadLine();
             return new Discipline(name, abbreviation);
         }
 
-        public static Class4 Class4()
+        public static Group Group()
         {
-            return new Class4();
+            return new Group();
         }
 
-        public static Class5 Class5()
+        public static Student Student()
         {
-            return new Class5();
+            return new Student();
         }
 
-        public static Class6 Class6()
+        public static Specialty Specialty()
         {
-            return new Class6();
+            return new Specialty();
         }
-        public static Class7 Class7()
+        public static Pair Pair()
         {
-            return new Class7();
-        }
-
-        public static Class8 Class8()
-        {
-            return new Class8();
+            return new Pair();
         }
 
-        public static Class9 Class9()
+        public static Shift Shift()
         {
-            return new Class9();
+            return new Shift();
         }
 
-        public static Class10 Class10()
+        public static Worker Worker()
         {
-            return new Class10();
+            return new Worker();
         }
 
-        public static Class11 Class11()
+        public static Post Post()
         {
-            return new Class11();
+            return new Post();
         }
 
-        public static Class12 Class12()
+        public static Subdivision Subdivision()
         {
-            return new Class12();
+            return new Subdivision();
         }
 
-        public static Class13 Class13()
+        public static Organization Organization()
         {
-            return new Class13();
+            return new Organization();
         }
-        public static Class14 Class14()
+
+        public static Corps Corps()
         {
-            return new Class14();
+            return new Corps();
+        }
+        public static TypeOfLesson TypeOfLesson()
+        {
+            return new TypeOfLesson();
         }
     }
 }
