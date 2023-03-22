@@ -1,6 +1,6 @@
 ﻿namespace ClassLibrary1
 {
-    public class Worker //https://drive.google.com/open?id=1dhWsZqo-d1x4uk0y45lDVnu4H91wRvpRWKJ0lfCizxY&usp=drive_copy
+    public class Worker //https://docs.google.com/document/d/1dhWsZqo-d1x4uk0y45lDVnu4H91wRvpRWKJ0lfCizxY/edit?usp=share_link
     {
         public Worker()
         {
