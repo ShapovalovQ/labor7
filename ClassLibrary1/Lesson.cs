@@ -2,7 +2,7 @@
 
 namespace ClassLibrary1
 {
-    public class Lesson //https://drive.google.com/open?id=1KZXfKJussGflgWnWylGbFrwmdcn3liYKIsgmtxB1mN0&usp=drive_copy
+    public class Lesson //https://docs.google.com/document/d/1KZXfKJussGflgWnWylGbFrwmdcn3liYKIsgmtxB1mN0/edit?usp=share_link
     {
         public DateTime Date { get; }
         public Discipline Discipline { get; }
