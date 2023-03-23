@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using ClassLibrary1;
 
 namespace ConsoleApp1
@@ -7,7 +7,7 @@ namespace ConsoleApp1
     {
         public static void Print(Lesson lesson)
         {
-            Console.WriteLine($"Class1.Дата проведения = {lesson.Date}");
+            Console.WriteLine($"Lesson.Дата проведения = {lesson.Date}");
             Print(lesson.Discipline);
             Print(lesson.Worker);
             Print(lesson.Auditorium);
