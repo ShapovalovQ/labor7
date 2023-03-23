@@ -44,7 +44,15 @@ namespace ConsoleApp1
 
         public static Student Student()
         {
-            return new Student();
+            Console.Write("Введите фамилию: ");
+            string lastName = Console.ReadLine();
+            Console.Write("Введите имя: ");
+            string firstName = Console.ReadLine();
+            Console.Write("Введите отчество: ");
+            string patronymic = Console.ReadLine();
+            Console.Write("Введите дату рождения: ");
+            string birthday = Console.ReadLine();
+            return new Student(lastName, firstName, patronymic, Group(), birthday);
         }
 
         public static Specialty Specialty()

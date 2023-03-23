@@ -31,9 +31,13 @@ namespace ConsoleApp1
         {
         }
 
-        public static void Print(Student class5)
+        public static void Print(Student student)
         {
-
+            Console.WriteLine($"Student.Фамилия = {student.LastName}");
+            Console.WriteLine($"Student.Имя = {student.FirstName}");
+            Console.WriteLine($"Student.Отчество = {student.Patronymic}");
+            Print(student.Group);
+            Console.WriteLine($"Student.Дата рождения = {student.Birthday}");
         }
 
         public static void Print(Specialty class6)
