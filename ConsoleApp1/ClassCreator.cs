@@ -10,25 +10,20 @@ namespace ConsoleApp1
         public static Lesson Lesson()
         {
             Console.WriteLine("Занятие");
-            DateTime date = DateTime.Now;
-            string input, d = "d.M.yyyy H:m:s";
-            CultureInfo ci = CultureInfo.InvariantCulture;
+            DateTime dateofthelesson;
+            string input;
             while (true)
             {
-                Console.Write("Введите дату проведения в формате \"число.месяц.год часы:минуты:секунды\": ");
+                Console.Write("Введите дату проведения в формате \"число.месяц.год\": ");
                 input = Console.ReadLine();
-                if (!DateTime.TryParseExact(input, d, ci, DateTimeStyles.None, out _))
+                if (!DateTime.TryParseExact(input, "d.M.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateofthelesson))
                 {
                     if (string.IsNullOrEmpty(input)) return new Lesson(Discipline(), Worker(), Auditorium(), Group(), Pair(), TypeOfLesson());
                     Console.WriteLine("Неверный формат");
                 }
-                else 
-                { 
-                    date = DateTime.ParseExact(input, d, ci);
-                    break;
-                }     
+                else break;    
             }
-            return new Lesson(date, Discipline(), Worker(), Auditorium(), Group(), Pair(), TypeOfLesson());
+            return new Lesson(dateofthelesson, Discipline(), Worker(), Auditorium(), Group(), Pair(), TypeOfLesson());
         }
 
         public static Auditorium Auditorium()
