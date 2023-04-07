@@ -10,14 +10,16 @@ namespace ConsoleApp1
         public static Lesson Lesson()
         {
             Console.WriteLine("Занятие");
-            DateTime date = DateTime.Now; string input, d = "d.M.yyyy H:m:s"; var ci = CultureInfo.InvariantCulture;
+            DateTime date = DateTime.Now;
+            string input, d = "d.M.yyyy H:m:s";
+            CultureInfo ci = CultureInfo.InvariantCulture;
             while (true)
             {
                 Console.Write("Введите дату проведения в формате \"число.месяц.год часы:минуты:секунды\": ");
                 input = Console.ReadLine();
                 if (!DateTime.TryParseExact(input, d, ci, DateTimeStyles.None, out _))
                 {
-                    if (string.IsNullOrEmpty(input)) break;
+                    if (string.IsNullOrEmpty(input)) return new Lesson(Discipline(), Worker(), Auditorium(), Group(), Pair(), TypeOfLesson());
                     Console.WriteLine("Неверный формат");
                 }
                 else 

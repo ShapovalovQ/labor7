@@ -22,5 +22,10 @@ namespace ClassLibrary1
             Pair = pair;
             TypeOfLesson = typeoflesson;
         }
+        public Lesson(Discipline discipline, Worker worker, Auditorium auditorium, Group group, Pair pair, TypeOfLesson typeoflesson)
+        :this(DateTime.Now, discipline,worker, auditorium, group, pair, typeoflesson)
+        {
+            
+        }
     }
 }
