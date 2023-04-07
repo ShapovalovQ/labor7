@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.Serialization.Formatters;
 using ClassLibrary1;
 
 namespace ConsoleApp1
@@ -16,9 +17,17 @@ namespace ConsoleApp1
             Print(lesson.TypeOfLesson);
         }
 
-        public static void Print(Auditorium class2)
+        public static void Print(Auditorium auditorium)
         {
-            
+            Console.WriteLine($"Auditorium.Название = {auditorium.Name}");
+            Print(auditorium.Worker);
+            Console.WriteLine($"Auditorium.Количество посадочных мест = {auditorium.Places}");
+            Console.WriteLine($"Auditorium.Количество окон = {auditorium.Window}");
+            for (int i = 0; i < auditorium.Equipment.Count; i++)
+            {
+                Console.Write($"{i+1}");
+                Print(auditorium.Equipment[i]);
+            }
         }
 
         public static void Print(Discipline discipline)
@@ -82,6 +91,11 @@ namespace ConsoleApp1
         public static void Print(TypeOfLesson class14)
         {
 
+        }
+        public static void Print(Equipment equipment)
+        {
+            Console.WriteLine("Оборудование");
+            Console.WriteLine($"Eq.test = {equipment.Test}");
         }
     }
 }
