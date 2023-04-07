@@ -9,26 +9,11 @@
         public string Birthday { get; }
         public Student(string lastName, string firstName, string patronymic, Group group, string birthday)
         {
-            this.LastName = lastName;
-            this.FirstName = firstName;
-            this.Patronymic = patronymic;
-            this.Group = group;
-            this.Birthday = birthday;
+            LastName = lastName;
+            FirstName = firstName;
+            Patronymic = patronymic;
+            Group = group;
+            Birthday = birthday;
         }
     }
-
-    /*Создать класс Студент с
-● закрытыми полями:
-○ фамилия
-○ имя
-○ отчество
-○ ссылка на группу
-○ дата рождения
-● конструктором принимающим следующие аргументы (все аргументы должны быть
-записаны в поля, если дата не задана, то берется текущая дата):
-○ фамилия
-○ имя
-○ отчество
-○ ссылка на группу
-○ дата рождения*/
 }
