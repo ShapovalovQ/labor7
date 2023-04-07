@@ -129,7 +129,23 @@ namespace ConsoleApp1
             string firstName = Console.ReadLine();
             Console.Write("Введите отчество: ");
             string patronymic = Console.ReadLine();
-            return new Worker(lastName, firstName, patronymic, Post());
+            DateTime date = DateTime.Now; string input, d = "d.M.yyyy H:m:s"; var ci = CultureInfo.InvariantCulture;
+            while (true)
+            {
+                Console.Write("Введите дату проведения в формате \"число.месяц.год часы:минуты:секунды\": ");
+                input = Console.ReadLine();
+                if (!DateTime.TryParseExact(input, d, ci, DateTimeStyles.None, out _))
+                {
+                    if (string.IsNullOrEmpty(input)) break;
+                    Console.WriteLine("Неверный формат");
+                }
+                else
+                {
+                    date = DateTime.ParseExact(input, d, ci);
+                    break;
+                }
+            }
+            return new Worker(date, lastName, firstName, patronymic, Post());
         }
 
         public static Post Post()
