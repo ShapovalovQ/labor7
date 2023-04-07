@@ -7,8 +7,8 @@
 
         public Discipline(string name, string abbreviation)
         {
-            this.Name = name;
-            this.Abbreviation = abbreviation;
+            Name = name;
+            Abbreviation = abbreviation;
         }
     }
 }
