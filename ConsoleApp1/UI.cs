@@ -7,7 +7,7 @@ namespace ConsoleApp1
     {
         public static void Print(Lesson lesson)
         {
-            Console.WriteLine($"Lesson.Дата проведения = {lesson.Date}");
+            Console.WriteLine($"Lesson.Дата проведения = {lesson.DateOfTheLesson.ToShortDateString()}");
             Print(lesson.Discipline);
             Print(lesson.Worker);
             Print(lesson.Auditorium);
