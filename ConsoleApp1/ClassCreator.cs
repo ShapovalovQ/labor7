@@ -31,17 +31,17 @@ namespace ConsoleApp1
             Console.WriteLine("Аудитория");
             Console.Write("Введите название аудитории: ");
             string name = Console.ReadLine();
-            uint places;
-            uint window;
+            byte places;
+            byte window;
             while (true)
             {
                 Console.Write("Введите количество посадочных мест: ");
-                if (!uint.TryParse(Console.ReadLine(), out places)) Console.WriteLine("Неверный формат"); else break;
+                if (!byte.TryParse(Console.ReadLine(), out places)) Console.WriteLine("Неверный формат"); else break;
             }
             while (true)
             {
                 Console.Write("Введите количество окон: ");
-                if (!uint.TryParse(Console.ReadLine(), out window)) Console.WriteLine("Неверный формат"); else break;
+                if (!byte.TryParse(Console.ReadLine(), out window)) Console.WriteLine("Неверный формат"); else break;
             }
             List<Equipment> list = new List<Equipment>();
             int c = 1;

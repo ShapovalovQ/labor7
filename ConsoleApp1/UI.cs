@@ -19,12 +19,12 @@ namespace ConsoleApp1
         public static void Print(Auditorium auditorium)
         {
             Console.WriteLine($"Auditorium.Название = {auditorium.Name}");
-            Print(auditorium.Worker);
+            Print(auditorium.ResponsibleWorker);
             Console.WriteLine($"Auditorium.Количество посадочных мест = {auditorium.Places}");
             Console.WriteLine($"Auditorium.Количество окон = {auditorium.Window}");
             for (int i = 0; i < auditorium.Equipment.Count; i++)
             {
-                Console.WriteLine($"{i+1} ");
+                Console.WriteLine($"{i+1}");
                 Print(auditorium.Equipment[i]);
             }
         }
