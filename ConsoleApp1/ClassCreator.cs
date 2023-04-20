@@ -121,7 +121,10 @@ namespace ConsoleApp1
 
         public static Shift Shift()
         {
-            return new Shift();
+            Console.WriteLine("Смена");
+            Console.Write("Введите название: ");
+            string name = Console.ReadLine();
+            return new Shift(name);
         }
 
 

@@ -65,9 +65,9 @@ namespace ConsoleApp1
 
         }
 
-        public static void Print(Shift class8)
+        public static void Print(Shift shift)
         {
-
+            Console.WriteLine($"Shift.Название = {shift.Name}");
         }
 
         public static void Print(Worker worker)
