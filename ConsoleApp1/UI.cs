@@ -51,7 +51,7 @@ namespace ConsoleApp1
             Console.WriteLine($"Student.Имя = {student.FirstName}");
             Console.WriteLine($"Student.Отчество = {student.Patronymic}");
             Print(student.Group);
-            Console.WriteLine($"Student.Дата рождения = {student.Birthday}");
+            Console.WriteLine($"Student.Дата рождения = {student.Birthday.ToShortDateString()}");
         }
 
         public static void Print(Specialty specialty)

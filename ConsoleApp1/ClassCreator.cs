@@ -93,9 +93,16 @@ namespace ConsoleApp1
             string firstName = Console.ReadLine();
             Console.Write("Введите отчество: ");
             string patronymic = Console.ReadLine();
-            Console.Write("Введите дату рождения: ");
-            string birthday = Console.ReadLine();
-            return new Student(lastName, firstName, patronymic, Group(), birthday);
+            Console.WriteLine("Введите дату рождения в формате дд.мм.гггг (день.месяц.год): ");
+            string birth = Console.ReadLine();
+            if (DateTime.TryParse(Console.ReadLine(), out DateTime birthday))
+            {
+                return new Student(lastName, firstName, patronymic, Group(), birthday);
+            }
+            else
+            {
+                return new Student(lastName, firstName, patronymic, Group());
+            }
         }
 
         public static Specialty Specialty()
