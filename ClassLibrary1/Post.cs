@@ -9,9 +9,9 @@
 
         public Post(string title, string salary, Subdivision subdivision)
         {
-            this.title = title;
-            this.salary = salary;
-            this.Subdivision = subdivision;
+            title = title;
+            salary = salary;
+            Subdivision = subdivision;
         }
     }
 }
