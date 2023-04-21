@@ -77,11 +77,19 @@ namespace ConsoleApp1
             string name = Console.ReadLine();
             Console.Write("Введите сокращение: ");
             string abbreviation = Console.ReadLine();
-            Console.Write("Введите численность: ");
-            string size = Console.ReadLine();
-            Console.Write("Введите год поступления: ");
-            string yearofadmission = Console.ReadLine();
-            return new Group(name, abbreviation, size, yearofadmission, Specialty(), Worker());
+            byte size;
+            uint year_of_admission;
+            while (true)
+            {
+                Console.Write("Введите численность: ");
+                if (!byte.TryParse(Console.ReadLine(), out size)) Console.WriteLine("Неверный формат"); else break;
+            }
+            while (true)
+            {
+                Console.Write("Введите год поступления: ");
+                if (!uint.TryParse(Console.ReadLine(), out year_of_admission)) Console.WriteLine("Неверный формат"); else break;
+            }
+            return new Group(name, abbreviation, size, year_of_admission, Specialty(), Worker());
         }
 
         public static Student Student()
