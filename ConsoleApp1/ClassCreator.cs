@@ -152,7 +152,10 @@ namespace ConsoleApp1
 
         public static Subdivision Subdivision()
         {
-            return new Subdivision();
+            Console.WriteLine("Подразделение");
+            Console.WriteLine("Введите название: ");
+            string title = Console.ReadLine();
+            return new Subdivision(title,Worker(),Organization());
         }
 
         public static Organization Organization()
