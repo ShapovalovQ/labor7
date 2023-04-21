@@ -40,9 +40,9 @@ namespace ConsoleApp1
             Console.WriteLine($"Group.Название = {group.Name}");
             Console.WriteLine($"Group.Сокращение = {group.Abbreviation}");
             Console.WriteLine($"Group.Численность = {group.Size}");
-            Console.WriteLine($"Group.Год поступления = {group.Yearofadmission}");
+            Console.WriteLine($"Group.Год поступления = {group.Year_of_admission}");
             Print(group.Specialty);
-            Print(group.ClassWorker);
+            Print(group.ClassTeacher);
         }
 
         public static void Print(Student student)
