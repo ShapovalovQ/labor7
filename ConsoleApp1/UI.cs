@@ -80,8 +80,8 @@ namespace ConsoleApp1
 
         public static void Print(Post post)
         {
-            Console.WriteLine($"Post.Название = {post.title}");
-            Console.WriteLine($"Post.Оклад = {post.salary}");
+            Console.WriteLine($"Post.Название = {post.Title}");
+            Console.WriteLine($"Post.Оклад = {post.Salary}");
             Print(post.Subdivision);
         }
 
